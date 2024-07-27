@@ -22,7 +22,6 @@ public class Product {
     private double price;
     private int quantity;
     private LocalDate supplied;
-    private LocalDate expiry;
 
     @ManyToOne
     @JoinColumn(name = "supplier_id")
