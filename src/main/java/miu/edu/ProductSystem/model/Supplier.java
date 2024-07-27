@@ -15,7 +15,7 @@ public class Supplier {
     @Id
     @GeneratedValue
     private Integer supplierId;
-    @Column(name ="Supplier Name ")
+    @Column(name ="SupplierController Name ")
     private String name;
     private String contactPhone;
 
