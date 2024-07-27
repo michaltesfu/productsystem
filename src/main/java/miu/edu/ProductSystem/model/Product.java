@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "products data")
+@Table(name = "Products Data")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,12 +19,12 @@ public class Product {
     private Long productId;
 
     private String name;
-    private double price;
-    private int quantity;
-    private LocalDate supplied;
+    private double unitPrice;
+    private int quantityInStock;
+    private LocalDate dateSupplied;
 
-    @ManyToOne
-    @JoinColumn(name = "supplier_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "supplierId")
     private Supplier supplier;
 
 

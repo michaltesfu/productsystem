@@ -19,6 +19,6 @@ public class Supplier {
     private String name;
     private String contactPhone;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "supplier", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Product> products;
 }
