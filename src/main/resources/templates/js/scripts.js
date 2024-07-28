@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function fetchProducts() {
-    fetch('http://localhost:8080/products/')
+    fetch('http://localhost:8080/products')
         .then(response => response.json())
         .then(data => {
             const productList = document.getElementById('productList');
