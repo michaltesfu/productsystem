@@ -1,5 +1,7 @@
 package miu.edu.ProductSystem.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,9 +15,10 @@ import java.util.List;
 @Entity
 public class Supplier {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "supplier_Id")
     private Integer supplierId;
-    @Column(name ="Supplier Name ")
+    @Column(name ="Supplier_name ")
     private String name;
     private String contactPhone;
 
