@@ -1,5 +1,7 @@
 package miu.edu.ProductSystem.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,11 +22,14 @@ public class Product {
 
     private String name;
     private double unitPrice;
+    @Column(name = "Quantity")
     private int quantityInStock;
     private LocalDate dateSupplied;
+    private String SupplierName;
+    private Long phoneNumber;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "supplierId")
+    @JoinColumn(name = "supplier_id")
     private Supplier supplier;
 
 
