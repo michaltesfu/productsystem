@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <title>MartyWally SRM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUM Golden Dome Market - SRM System</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<h1>Welcome to MartyWally Supplier Relationship Management System</h1>
-<ul>
-    <li><a th:href="@{/products}">View All Products</a></li>
-</ul>
+<header>
+    <div class="header-container">
+        <h1>MUM Golden Dome Market ::: SRM System</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="suppliers.html">Suppliers</a></li>
+            </ul>
+        </nav>
+        <button class="signin">Sign In</button>
+    </div>
+</header>
+<main>
+    <h2>Welcome to the Supplier Relationship Management system (SRM)</h2>
+    <p>To create and manage <a href="products.html" class="inline-link">Products</a> and <a href="suppliers.html" class="inline-link">Suppliers</a>, please first make sure to read the instructions and key points provided below. And then click the appropriate menu item, located on the menu-bar above.</p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</main>
+<footer>
+    <p>&copy; October 2019</p>
+</footer>
 </body>
 </html>

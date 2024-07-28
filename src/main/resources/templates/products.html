@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <title>All Products</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUM Golden Dome Market - SRM System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
 </head>
 <body>
-<h1>List of All Products</h1>
-<table>
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Unit Price</th>
-        <th>Quantity</th>
-        <th>DateSupplied</th>
-        <th>Supplier Name</th>
-        <th>PhoneNumber</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="product : ${products}">
-        <td th:text="${product.productId}"></td>
-        <td th:text="${product.name}"></td>
-        <td th:text="${product.unitPrice}"></td>
-        <td th:text="${product.quantityInStock}"></td>
-        <td th:text="${product.dateSupplied}"></td>
-        <td th:text="${product.supplierName}"></td>
-        <td th:text="${product.contactPhone}"></td>
-    </tr>
-    </tbody>
-</table>
+<header>
+    <div class="header-container">
+        <h1>MUM Golden Dome Market ::: SRM System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="suppliers.html">Suppliers</a></li>
+            </ul>
+        </nav>
+        <button class="signin">Sign In</button>
+    </div>
+</header>
+<main>
+    <div class="product-header">
+        <h2>List of Products in stock</h2>
+        <button id="addProductBtn">Add a New Product</button>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Product Number</th>
+            <th>Name</th>
+            <th>Unit Price</th>
+            <th>Qty in Stock</th>
+            <th>Supplier</th>
+            <th>Date Supplied</th>
+        </tr>
+        </thead>
+        <tbody id="productList">
+        <!-- Product rows will be added here by JavaScript -->
+        </tbody>
+    </table>
+</main>
+<footer>
+    <p>&copy; August 2024</p>
+</footer>
 </body>
 </html>
